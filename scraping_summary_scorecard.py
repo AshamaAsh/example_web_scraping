@@ -12,7 +12,7 @@ def get_df():
     df = pd.read_csv('url_scorecard_summary.csv')
     df_year = pd.read_csv('url_year.csv')
 
-    # list of year
+    # list of year, range of needed url
     year_df = df_year.iloc[125:133, 0]
     list_year = list(year_df)
 
@@ -66,9 +66,6 @@ def extract_over(input):
         overs.append(item[0])
 
     return overs
-
-url = ['https://www.espncricinfo.com/records/year/team-match-results/1877-1877/test-matches-1']
-url2 = ['https://www.espncricinfo.com/records/year/team-match-results/1952-1952/test-matches-1']
 
 ## with year link
 def get_sum_from_year_series(url_list):
